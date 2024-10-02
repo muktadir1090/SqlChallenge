@@ -145,7 +145,7 @@ function readEmployees() {
 }
 
 
-functionreadEmployeesByDepartment() {
+function readEmployeesByDepartment() {
   db.findAllDepartments().then(({ rows }) => {
     let departments = rows;
     const departmentChoices = departments.map(({ id, name }) => ({
@@ -171,7 +171,7 @@ functionreadEmployeesByDepartment() {
   });
 }
 
-functionreadEmployeesByManager() {
+function readEmployeesByManager() {
   db.findAllEmployees().then(({ rows }) => {
     let managers = rows;
     const managerChoices = managers.map(({ id, first_name, last_name }) => ({
